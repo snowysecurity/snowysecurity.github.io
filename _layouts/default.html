@@ -10,13 +10,31 @@
 
     <style>
         ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
         }
-        
+
         li {
-          display: inline;
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
         }
     </style>
 
@@ -26,7 +44,7 @@
   <body>
 
     <ul>
-        <li><a href="../index.md">Home</a></li>
+        <li><a class="active" href="../index.md">Home</a></li>
         <li><a href="../write-ups.md">Write-Ups</a></li>
         <li><a href="../contact.md">Contact</a></li>
         <li><a href="../about.md">About</a></li>
